@@ -1,0 +1,58 @@
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+//
+//  Styles for emails
+//  _____________________________________________
+
+//  See comments in source/_email-base.scss for explanation of email styles
+
+// Mixins
+@import "mixins/media-queries";
+
+// Vendor libs
+@import 'vendor/magento-ui/lib'; // Magento UI
+
+// Theme variables
+@import 'variables';
+
+// Email variables
+@import 'vendor/magento-ui/variables/email'; // Global email variables
+@import 'blocks/email-variables'; // Theme variables for emails
+
+
+//  Import these file by reference so that only the styles included in the @mixin email-non-inline() and @mixin media-width()
+//  mixins will be output. All other styles will be output via the email-inline.less file@mixin 
+// $import (reference) 'source/_email-base.less'; // Contains primary email styles
+// $import (reference) 'source/_email-extend.less'; // Contains theme-specific adjustments to email styles
+
+// @todo: convert the import-by-reference to sass, which is currenlty not possbile in sass, see also
+// https://github.com/sass/sass/issues/1094 . Maybe there is a postcss or gulp plugin to fix this?
+
+
+@import 'blocks/email-base'; // Contains primary email styles
+@import 'blocks/email-extend'; // Contains theme-specific adjustments to email styles
+
+//
+//  Module-specific styles for emails
+//  ---------------------------------------------
+
+//  Import files using (reference) for the same reason stated above
+// $magento_import (reference) 'source/_email.less';
+
+// @todo: convert the import-by-reference to sass, which is currenlty not possbile in sass, see also
+// https://github.com/sass/sass/issues/1094 . Maybe there is a postcss or gulp plugin to fix this?
+
+@import '../Magento_Bundle/styles/email';
+@import '../Magento_Rma/styles/email';
+@import '../Magento_Sales/styles/email';
+
+
+//
+//  Non-inline styles
+//  ---------------------------------------------
+
+//  Include all styles that have been indicated as non-inline styles
+@include email-non-inline();

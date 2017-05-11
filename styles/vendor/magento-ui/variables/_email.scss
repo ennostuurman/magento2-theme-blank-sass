@@ -1,0 +1,46 @@
+// /**
+//  * Copyright © 2016 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Email variables
+//  _____________________________________________
+@import 'vendor/magento-ui/variables/messages';
+
+//  Base URL path
+// @baseUrl: "{{base_url_path}}/";
+// Previous snippet is from the _email.less and is a Magento specific LESS parser variable
+// declared in vendor/magento/module-email/Model/Template/Css/Processor.php:62.
+// Not usable w/ Gulp parsing tho, replace it w/ hardcoded base path for now
+
+//$baseUrl: "https://yourdomain/static/frontend/package/theme/locale";
+
+
+//  Structure
+$email-body__width: 600px;
+$email-body__padding: $indent__s;
+
+//  Content
+$email-content__padding__base: $indent__s;
+$email-content__padding__s: $indent__xs;
+$email-content__padding__m: $indent__base;
+$email-content__padding__l: $indent__l;
+$email-content__padding__xl: $indent__xl;
+
+//  Colors
+$email__background-color: $color-white;
+$email-content__background-color: $color-white;
+
+//  Messages
+$message-email__color: $text__color;
+$message-email__background: $message__background;
+$message-email__border-color: $message__border-color;
+$message-email-link__color: $message-link__color;
+
+// Placeholders used for @extend
+%removeLinkColor {
+    color: $text__color !important;
+    cursor: default !important;
+    text-decoration: none !important;
+}

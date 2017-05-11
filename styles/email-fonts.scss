@@ -1,0 +1,30 @@
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+//
+//  Fonts for Emails
+//  _____________________________________________
+
+// Mixins
+@import "mixins/media-queries";
+
+// Vendor libs
+@import 'vendor/magento-ui/lib'; // Magento UI
+
+// Theme variables
+@import 'variables';
+
+// Email variables
+@import 'vendor/magento-ui/variables/email'; // Global email variables
+@import 'blocks/email-variables'; // Theme variables for emails
+
+//
+//  Output $font-face declarations
+//  ---------------------------------------------
+
+//  Font stylesheet $import is wrapped in a media query in order to prevent it from causing problems in Outlook
+@media screen {
+    @import 'blocks/typography';
+}

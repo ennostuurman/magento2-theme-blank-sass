@@ -1,0 +1,38 @@
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+//
+//  Styles for emails
+//  _____________________________________________
+
+//  See comments in source/_email-base.scss for explanation of email styles
+
+// Mixins
+@import "mixins/media-queries";
+
+// Vendor libs
+@import 'vendor/magento-ui/lib'; // Magento UI
+
+// Theme variables
+@import 'variables';
+
+// Email variables
+@import 'vendor/magento-ui/variables/email'; // Global email variables
+@import 'blocks/email-variables'; // Theme variables for emails
+
+//
+//  Styles for emails
+//  ---------------------------------------------
+
+@import 'blocks/email-base'; // Contains primary email styles
+@import 'blocks/email-extend'; // Contains theme-specific adjustments to email styles
+
+//
+//  Module-specific styles for emails
+//  ---------------------------------------------
+
+@import '../Magento_Bundle/styles/email';
+@import '../Magento_Rma/styles/email';
+@import '../Magento_Sales/styles/email';
